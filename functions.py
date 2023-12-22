@@ -83,3 +83,65 @@ def generate_fy_calendar(BEGIN_FY, END_FY):
         date_list.append(current_date)
         current_date += datetime.timedelta(days=7)
     return date_list
+
+def planejamento(hour):
+    if hour > 15000:
+        return "Full time"
+    elif hour > 7301 and hour <= 15000:
+        return 5
+    elif hour > 4601 and hour <= 7300:
+        return 4
+    elif hour > 1501 and hour <= 4600:
+        return 3
+    elif hour > 1201 and hour <= 1500:
+        return 2
+    elif hour > 501 and hour <= 1200:
+        return 1
+    else:
+        return 0
+    
+def interim(hour):
+    if hour > 15000:
+        return "Full time"
+    elif hour > 10001 and hour <= 15000:
+        return 7
+    elif hour > 4601 and hour <= 10000:
+        return 6
+    elif hour > 1501 and hour <= 4600:
+        return 4
+    elif hour > 801 and hour <= 1500:
+        return 3
+    elif hour > 501 and hour <= 800:
+        return 2
+    else:
+        return 1
+    
+def final(hour):
+    if hour > 15000:
+        return "Full time"
+    elif hour > 10001 and hour <= 15000:
+        return 10
+    elif hour > 7301 and hour <= 10000:
+        return 9
+    elif hour > 4601 and hour <= 7300:
+        return 7
+    elif hour > 2401 and hour <= 4600:
+        return 5
+    elif hour > 1501 and hour <= 2400:
+        return 4
+    else:
+        return 3
+    
+def trimestral(hour):
+    if hour > 15000:
+        return 4
+    elif hour > 7301 and hour <= 15000:
+        return 2
+    elif hour > 4601 and hour <= 10000:
+        return 3
+    elif hour > 1501 and hour <= 7300:
+        return 2
+    elif hour > 1021 and hour <= 1500:
+        return 1
+    else:
+        return 0
