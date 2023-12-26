@@ -145,3 +145,15 @@ def trimestral(hour):
         return 1
     else:
         return 0
+
+
+#%% Objective function
+def std_hours(df):
+    # Calculate column totals and add a new 'total' row
+    df.loc['total'] = df.sum(axis=0)
+
+    # Calculate standard deviation with degree of freedom for the total population
+    # std_total = np.std(df.loc['total'], ddof=0)
+    std_total = df.loc['total'].std(ddof=0)
+
+    return df, std_total
