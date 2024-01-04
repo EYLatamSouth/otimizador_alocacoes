@@ -189,4 +189,4 @@ def arrangeAllResources(df_company, df_phases, start_date, end_date):
         if isinstance(col, dt.datetime):
             df_result.rename(columns={col: col.strftime('%Y-%m-%d')}, inplace=True)
     
-    df_result.to_excel('Resultado.xlsx', index=False)
+    df_result.to_excel('Resultado.xlsx', index=True)
