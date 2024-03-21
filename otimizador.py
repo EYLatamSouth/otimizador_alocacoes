@@ -129,10 +129,13 @@ def insertPhaseWeek(df_company, index_company, row_company, row_phase, vacation_
     first_week = getWeekLowestHours(df_company, getSpecificDayofWeek(phase_start, phase_end).difference(vacation_weeks))  
     
     if phase_code == 'fase_final':
-        first_week = pd.Timestamp(phase_end)
+        #first_week = pd.Timestamp(phase_end)
         if phase_interval > row_company[phase_code]:
-            total_period = row_company[phase_code] if row_company[phase_code] > 4 else 5
-            
+            total_period = row_company[phase_code] 
+            if row_company[phase_code] <= 4:
+                #Adiciona +5 semanas, pois as empresas pequenas devem começar a fase final apenas em Fevereiro 
+                phase_start = pd.Timestamp(row_phase['start']) + dt.timedelta(weeks=5) 
+                print(phase_start)
         
     week_current = first_week
     week_max = first_week
@@ -151,14 +154,12 @@ def insertPhaseWeek(df_company, index_company, row_company, row_phase, vacation_
                 break
                 
 
-def replaceCurrentWeek(week_current, week_min, week_max):
-    if week_current == week_min:
-        week_min = week_min - dt.timedelta(weeks=1)
-    
-    if week_current == week_max:
-        week_max = week_max + dt.timedelta(weeks=1)
-    
-    return week_min, week_max
+# def replaceCurrentWeek(week_current, week_min, week_max):
+#     if week_current == week_min:
+#         week_min = week_min - dt.timedelta(weeks=1)
+#     if week_current == week_max:
+#         week_max = week_max + dt.timedelta(weeks=1)
+#     return week_min, week_max
     
                 
 def getOutputStructure(df_company, start_date, end_date):
