@@ -48,7 +48,7 @@ def main():
         data.append(formatted_date)
 
     df = pd.read_excel(r"Resultado.xlsx")
-    df.drop(columns=["Unnamed: 0"], inplace=True)
+    # df.drop(columns=["Unnamed: 0"], inplace=True)
 
     for col in df.columns:
         if all(df[col]==0):
