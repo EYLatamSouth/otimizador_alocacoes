@@ -1,12 +1,24 @@
 import pandas as pd
 import json
 import numpy as np
-from functions import generate_fy_calendar
+# from functions import generate_fy_calendar
 import datetime
 
 
 BEGIN_FY = datetime.date(2023, 7, 15)
 END_FY = datetime.date(2024, 6, 29)
+
+def generate_fy_calendar(BEGIN_FY, END_FY):
+    start_date = BEGIN_FY
+    end_date = END_FY
+
+    date_list = []
+
+    current_date = start_date
+    while current_date <= end_date:
+        date_list.append(current_date)
+        current_date += datetime.timedelta(days=7)
+    return date_list
 
 
 def process_staff_level(level, staff, df, data):

@@ -1,17 +1,13 @@
-import otimizador as ot
-import datetime as dt
-import pandas as pd
+import subprocess
 
 def main():
-    print("Inicio da execução!")
 
-    df_configEmpresa = pd.read_csv('bases/Configuracao_Empresas.csv', sep=';').sort_values('prioridade')
-    df_fasesProjetos = pd.read_csv('bases/fases_projetos.csv', sep=';')
-    
-    ot.arrangeAllResources(df_configEmpresa, df_fasesProjetos, '2023-07-15', '2024-06-30')
-    
-    print("Execução finalizada!")
-    
+    # Lista dos seus serviços
+    services = ["exec_otimizador.py", "alocacao.py", "concatenar_linhas.py"]
 
+    # Itera através da lista de serviços e os executa em ordem
+    for service in services:
+        # O comando 'python' pode precisar de ser substituído por 'python3' ou um caminho para o python, dependendo do seu ambiente
+        subprocess.run(["python", service])
 if __name__ == "__main__":
     main()
