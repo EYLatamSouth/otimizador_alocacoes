@@ -1,0 +1,11 @@
+﻿phase;code;part;start;end
+Análise Trimetral - 1;fase_trimestral;T;2024-04-13;2024-05-11
+Análise Trimetral - 2;fase_trimestral;T;2023-07-15;2023-08-12
+Análise Trimetral - 3;fase_trimestral;T;2023-10-14;2023-11-11
+Final;fase_final;;2024-01-13;2024-03-30
+Planejamento;fase_planejamento;G;2024-04-06;2024-06-30
+Planejamento;fase_planejamento;P;2023-08-12;2023-11-12
+Interim;fase_interim;G;2023-10-15;2024-02-24
+Interim;fase_interim;P;2023-10-15;2024-02-24
+Férias;fase_ferias;F;2023-12-23;2024-01-05
+Férias;fase_ferias;F;2024-06-15;2024-06-28
