@@ -14,7 +14,7 @@ def main():
         max_len = max(df.apply(lambda x: x.dropna().shape[0]))
 
         # Create a dataframe of NaN values with the necessary length
-        res_list = pd.DataFrame(np.nan, index=np.arange(max_len), columns=df.columns)
+        res_list = pd.DataFrame(None, index=np.arange(max_len), columns=df.columns, dtype='object')
 
         for col in df.columns:
             res = df[col].dropna().reset_index(drop=True)

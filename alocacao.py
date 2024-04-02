@@ -42,11 +42,11 @@ def process_staff_level(level, staff, df, data):
         for idx, col in enumerate(df_clean.columns[1:]):
             value = row[col]
             if value == 40:
-                df_s[col][index] = company
+                df_s.loc[index, col] = company
             elif value == "F":
-                df_s[col][index] = "F"
+                df_s.loc[index, col] = "F"
             else:
-                df_s[col][index] = ""
+                df_s.loc[index, col] = ""
 
     df_s.to_csv(f"{level}.csv")
 
