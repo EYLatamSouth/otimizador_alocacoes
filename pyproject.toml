@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "allocpro"
+version = "0.0.1"
+description = "Find optimal allocation of Assurance professionals"
+authors = ["Erik Ingwersen <erik.ingwersen@br.ey.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/EYLatamSouth/otimizador_alocacoes"
+repository = "https://github.com/EYLatamSouth/otimizador_alocacoes"
+documentation = "https://github.com/EYLatamSouth/otimizador_alocacoes"
+packages = [
+    { include = "allocpro", from = "src" },
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/ingwersen-erik/intellipy/releases"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+flake8 = { version = ">=4.0.1", optional = false }
+flake8-bandit = { version = ">=2.1.2", optional = false }
+flake8-bugbear = { version = ">=21.9.2", optional = false }
+flake8-docstrings = { version = ">=1.6.0", optional = false }
+flake8-rst-docstrings = { version = ">=0.2.5", optional = false }
+flake8-annotations = {version = "^2.7.0", python = ">= 3.6.2", optional = false }
+pandas = { version = ">=2.2.1", optional = false }
+numpy = { version = ">=1.26.4", optional = false }
+openpyxl = { version = ">=3.1.2", optional = false }
+
+[tool.poetry.dev-dependencies]
+coverage = {extras = ["toml"], version = ">=6.2" }
+darglint = { version = ">=1.8.1", optional = true }
+
+furo = { version = ">=2021.11.12", optional = true }
+isort = { version = ">=5.10.1", optional = true }
+mypy = { version = ">=0.930", optional = true }
+myst-parser = { version = ">=0.16.1", optional = true }
+pep8-naming = { version = ">=0.12.1", optional = true }
+pre-commit = { version = ">=2.16.0", optional = true }
+pre-commit-hooks = { version = ">=4.1.0", optional = true }
+pytest = { version = ">=6.2.5", optional = true }
+pyupgrade = { version = ">=2.29.1", optional = true }
+safety = { version = ">=1.10.3", optional = true }
+sphinx = { version = ">=4.3.2", optional = true }
+sphinx-autobuild = { version = ">=2021.3.14", optional = true }
+sphinx-click = { version = ">=3.0.2", optional = true }
+typeguard = { version = ">=2.13.3", optional = true }
+xdoctest = { extras = ["colors"], version = ">=0.15.10", optional = true }
+
+
+[tool.poetry.scripts]
+run-allocation = "allocpro.main:main"
+
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+
+[tool.coverage.run]
+branch = true
+source = ["allocpro", "tests"]
+
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+lines_after_imports = 2
+
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | build
+  | dist
+  | docs
+)/
+'''
+
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+    "setuptools >= 40.9.0",
+    "wheel",
+]
+build-backend = "poetry.core.masonry.api"

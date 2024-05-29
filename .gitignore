@@ -158,3 +158,40 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.DS_Store
+.idea/aws.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/dictionaries/erikingwersen.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/otimizador_alocacoes.iml
+.idea/vcs.xml
+.idea/webResources.xml
+
+Backups
+Backups/**
+Temp.ipynb
+Untitled.ipynb
+.DS_Store
+**/.DS_Store
+Backups/2024-05-29 04h_44m/Staging/trainee.csv
+Backups/2024-05-29 04h_44m/Staging/staff 3.csv
+Backups/2024-05-29 04h_44m/Staging/staff 2.csv
+Backups/2024-05-29 04h_44m/Staging/senior.csv
+Backups/2024-05-29 04h_44m/Outputs/trainee_alocacao_final.csv
+Backups/2024-05-29 04h_44m/Outputs/staff 3_alocacao_final.csv
+Backups/2024-05-29 04h_44m/Outputs/staff 2_alocacao_final.csv
+Backups/2024-05-29 04h_44m/Outputs/senior_alocacao_final.csv
+Backups/2024-05-29 04h_44m/Outputs/Resultado.xlsx
+Backups/2024-05-29 03h_59m/Staging/trainee.csv
+Backups/2024-05-29 03h_59m/Staging/staff 3.csv
+Backups/2024-05-29 03h_59m/Staging/staff 2.csv
+Backups/2024-05-29 03h_59m/Staging/senior.csv
+Backups/2024-05-29 03h_59m/Outputs/trainee_alocacao_final.csv
+Backups/2024-05-29 03h_59m/Outputs/staff 3_alocacao_final.csv
+Backups/2024-05-29 03h_59m/Outputs/staff 2_alocacao_final.csv
+Backups/2024-05-29 03h_59m/Outputs/senior_alocacao_final.csv
+Backups/2024-05-29 03h_59m/Outputs/Resultado.xlsx
+Análises/Entendimento Solução.ipynb
