@@ -57,7 +57,7 @@ conda activate <NOME-DO-ENV>
 
 ### Passo 3: Instalação
 
-![](/Resources/Instalando Aplicação.mp4)
+![](https://github.com/EYLatamSouth/otimizador_alocacoes/blob/e37ba11952b648221f0cdb6abee5f551f02fe741/Resources/Instalando%20Aplica%C3%A7%C3%A3o.mp4)
 
 Para instalar a aplicação de alocação de recursos e todas suas bibliotecas
 auxiliares, execute o seguinte comando:
