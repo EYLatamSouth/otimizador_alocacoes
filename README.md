@@ -4,6 +4,8 @@ Projeto otimiza a alocação de profissionais de Assurance, conforme
 a quantidade de profissionais disponíveis, horas requeridas por cada projeto e
 suas respectivas especificidades.
 
+---
+
 ## Clonando este Projeto
 
 Execute o seguinte comando no seu terminal (Command Prompt, Terminal):
@@ -12,8 +14,9 @@ Execute o seguinte comando no seu terminal (Command Prompt, Terminal):
 git clone https://github.com/EYLatamSouth/otimizador_alocacoes.git
 ```
 
+---
 
-## Criando Novo Environment
+## Instalando Aplicação
 
 Recomendamos que você crie um novo ambiente para execução deste projeto.
 Caso tenha o Anaconda ou Miniconda instalado em sua máquina, execute os 
@@ -70,7 +73,11 @@ O comando acima irá instalar a aplicação de alocação de recursos, assim com
 todos os pacotes necessários para a execução do processo de otimização de
 alocações.
 
+----
+
 ## Executando Aplicação
+
+![](/Resources/executando-aplicacao.gif)
 
 Para executar a aplicação e gerar os arquivos com as alocações de
 recursos otimizadas, execute o seguinte comando:
@@ -94,3 +101,12 @@ Neste arquivo é possível especificar o diretório de onde os inputs serão lid
 a pasta onde os resultados das alocações deverão ser salvos, assim como,
 as datas de início e fim do ano fiscal.
 
+### Outputs
+
+O comando `run-allocation` salva os seguintes arquivos dentro da pasta [Outputs](/Outputs):
+
+- [Resultado.xlsx](/Outputs/Resultado.xlsx)
+- [senior_alocacao_final.csv](/Outputs/senior_alocacao_final.csv)
+- [staff 2_alocacao_final.xlsx](/Outputs/staff%202_alocacao_final.csv)
+- [staff 3_alocacao_final.csv](/Outputs/staff%203_alocacao_final.csv)
+- [trainee_alocacao_final.csv](/Outputs/trainee_alocacao_final.csv)
